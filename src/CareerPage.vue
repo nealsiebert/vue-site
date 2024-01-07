@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import intro from './HomePage/intro.md?raw'
+import intro from './CareerPage/intro.md?raw'
 import Markdown from './RenderMarkdown.vue'
 </script>
 

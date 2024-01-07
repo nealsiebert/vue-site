@@ -1,0 +1,1 @@
+Hi, I am NealSiebert a software engineering and product development leader. Thank you for visiting my site and your interest in my career, this section will have details soon in the meantime place visit my [LinkedIn](https://www.linkedin.com/in/nealsiebert/) or contact me at [nealsiebert@gmail.com](mailto:nealsiebert@gmail.com).
