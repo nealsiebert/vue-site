@@ -17,7 +17,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import './style.css'
 import App from './App.vue'
-import colors from 'vuetify/util/colors'
+/* import colors from 'vuetify/util/colors' */
 import { 
   createRouter,
   createWebHistory

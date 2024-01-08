@@ -12,7 +12,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer" />
       <v-avatar>
         <v-img
-          src="/src/assets/profile.jpg"
+          src="/profile.jpg"
           alt="Neal"
         />
       </v-avatar>
