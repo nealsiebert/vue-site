@@ -22,12 +22,17 @@
       </v-app-bar-title>
       <SocialIcon 
         href="https://www.linkedin.com/in/nealsiebert/"
-        icon="fa-linkedin"
-        transform="left-4"
+        icon="fa-brands fa-linkedin"
+        transform="left-8"
       />
       <SocialIcon 
         href="https://github.com/nealsiebert"
-        icon="fa-github"
+        icon="fa-brands fa-github"
+        transform="left-4"
+      />
+      <SocialIcon 
+        href="mailto:nealsiebert@gmail.com"
+        icon="fa-solid fa-envelope"
         transform=""
       />
     </v-app-bar>
@@ -49,6 +54,30 @@
             icon="fa-solid fa-briefcase"
           />
           Career
+        </router-link>
+      </v-list-item>
+      <v-list-item>
+        <router-link to="/blog">
+          <font-awesome-icon
+            icon="fa-solid fa-blog"
+          />
+          Blog
+        </router-link>
+      </v-list-item>
+      <v-list-item>
+        <router-link to="/tech">
+          <font-awesome-icon
+            icon="fa-solid fa-laptop-code"
+          />
+          Tech
+        </router-link>
+      </v-list-item>
+      <v-list-item>
+        <router-link to="/product">
+          <font-awesome-icon
+            icon="fa-regular fa-lightbulb"
+          />
+          Product
         </router-link>
       </v-list-item>
     </v-navigation-drawer>

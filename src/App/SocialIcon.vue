@@ -10,7 +10,7 @@
     :href="props.href"
   >
     <font-awesome-icon
-      :icon="'fa-brands ' + props.icon"
+      :icon="props.icon"
       size="2xl"
       :transform="props.transform"
     />

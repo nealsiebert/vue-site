@@ -1,1 +1,3 @@
-Hi, I am NealSiebert a software engineering and product development leader. Thank you for visiting my site, unfortunately it is still under construction. Please come back soon or contact me at [nealsiebert@gmail.com](mailto:nealsiebert@gmail.com).
+<p style="text-align: center;">Hi, I am Neal, I build software. I have been a gameplay programmer, software engineer, and senior engineering leader. If you would like to know more about me and my professional accomplishments please head over <a href="./career" >here</a>, visit my <a href="https://www.linkedin.com/in/nealsiebert/">LinkedIn</a>, or contact me at <a href ="mailto:nealsiebert@gmail.com">nealsiebert@gmail.com</a></p>
+<br/>
+<p style="text-align: center;">I am passionate about product development, emerging technologies, best practices in software development, and modern management techniques. If any of those interest you please I write about them over <a href="" >here</a>.</p>

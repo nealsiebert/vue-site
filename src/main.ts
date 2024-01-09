@@ -13,8 +13,14 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
-  faBriefcase
+  faBriefcase,
+  faLaptopCode,
+  faBlog,
+  faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faLightbulb,
+} from '@fortawesome/free-regular-svg-icons'
 import './style.css'
 import App from './App.vue'
 /* import colors from 'vuetify/util/colors' */
@@ -24,10 +30,16 @@ import {
 } from 'vue-router';
 import Home from './HomePage.vue';
 import Career from './CareerPage.vue';
+import Blog from './BlogPage.vue';
+import Product from './ProductPage.vue';
+import Technical from './TechnicalPage.vue';
 
 const routes = [
   { path: '/', component: Home },
   { path: '/career', component: Career },
+  { path: '/blog', component: Blog },
+  { path: '/product', component: Product },
+  { path: '/tech', component: Technical },
 ]
 
 const router = createRouter({
@@ -40,7 +52,11 @@ library
   faLinkedin,
   faGithub,
   faHome,
-  faBriefcase
+  faBriefcase,
+  faLaptopCode,
+  faBlog,
+  faLightbulb,
+  faEnvelope,
 )
 
 const myCustomLightTheme: ThemeDefinition = {

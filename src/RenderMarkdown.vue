@@ -19,6 +19,7 @@ const content = computed(() => md.value.render(props.source));
 </script>
 
 <template>
+  <!-- eslint-disable-next-line vue/no-v-html-->
   <div v-html="content" />
 </template>
 
