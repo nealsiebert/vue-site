@@ -1,0 +1,1 @@
+Modern product development principles are mission critical to running a successful software company. At strong product organization reduces the risk of software development and improves customer outcomes. Done correctly, product management empowers engineers and designers to do what they do best, solve your customers problems.

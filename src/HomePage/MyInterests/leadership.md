@@ -1,0 +1,1 @@
+I believe that a good company culture is more than just liking where you work. A culture of servant leadership, autonomy and alignment, trust and accountability, constructive conflict, mutual respect, and continuous improvement builds teams of missionaries, not mercenaries. A strong culture makes a company more successful.
