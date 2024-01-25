@@ -1,14 +1,14 @@
 <script setup lang="ts">
   import AboutMe from './HomePage/AboutMe.vue'
   import Interests from './HomePage/MyInterests.vue'
-  import Hobbies from './HomePage/MyHobbies.vue'
+  import RecentPosts from './HomePage/RecentPosts.vue'
 </script>
 
 <template>
   <v-container>
     <AboutMe />
     <Interests />
-    <Hobbies />
+    <RecentPosts />
   </v-container>
 </template>
 

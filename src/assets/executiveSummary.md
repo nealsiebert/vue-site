@@ -1,0 +1,7 @@
+I have been a professional software engineer for 18 years and I love building things that make people's lives better. From my first job as a Game Programmer to my last role as Head of Engineering, it has always been about finding out what the customer needs to be successful. For me, success is hearing your customer say “I don’t know how I ever lived without this.”\
+\
+For the past 10 years, I have been a manager, senior leader, and executive in both small and large businesses building web-based products. That experience has taught me so much about modern product management techniques - how to engage with customers, use product discovery and prototyping to reduce risk, build teams of missionaries, and most importantly, how to build something your users really want.\
+\
+My favorite thing about going to work is the people. I’m an engineer at heart and I love solving problems, but I find true value in coaching, mentoring, and helping people grow in their careers. I still remember, all these years later, how proud I was watching one of my engineers acing his first design review.\
+\
+If you’re interested in how to build great products, high quality software, new technology, or great teams, I would love to chat. Fair warning though, I can get on a roll on any of those subjects.

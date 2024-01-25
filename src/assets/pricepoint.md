@@ -1,0 +1,5 @@
+PricePoint is an independent move pricing platform focused on international and US domestic employee relocations. If your company needed to move someone, PricePoint could get you a fair price.\
+\
+At PricePoint, I was responsible for Product and Technology. As the fourth employee and first full-time engineer, I took PricePoint from a one server web application to a production-grade software platform covering 3 million+ tariffs and 3,500 locations worldwide with all the bells and whistles. From toolchains to service meshes to alerting, building something from the ground up, it was a ton of fun (and a lot of work).\
+\
+My time at PricePoint highlighted the value of good product management. As a small company, my team never grew larger than five members, and investing in the right products and features was critical. We made some mistakes along the way, but I learned a lot too. In the end, I am proud of what we built.

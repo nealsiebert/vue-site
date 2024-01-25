@@ -1,5 +1,8 @@
 <script setup lang="ts">
-  import summary from './ExecSummary/summary.md?raw'
+  import summary from '../assets/executiveSummary.md?raw'
+  import colors from 'vuetify/util/colors';
+  import TLDREntry from './ExecSummary/TLDREntry.vue';
+  const tldrColor = colors.grey.lighten3
 </script>
 
 <template>
@@ -9,41 +12,52 @@
       sm="12"
     >
       <v-card
-        variant="tonal"
         min-height="100%"
         density="compact"
+        :color="tldrColor"
       >
-        <v-card-title>
-          TLDR;
-        </v-card-title>
-        <v-card-text style="padding-bottom: 0%;">
-          <font-awesome-icon
-            icon="fa-solid fa-file"
-          />
-          <a
+        <v-card-text>
+          <v-card-title>TLDR;</v-card-title>
+          <TLDREntry
             href="/resume.docx"
-            download
-          >
-            resume
-          </a>
-        </v-card-text>
-        <v-card-text style="padding-bottom: 0%; padding-top: 2%;">
-          <font-awesome-icon
-            icon="fa-solid fa-calendar-days"
+            title="resume.docx"
+            :color="tldrColor"
           />
-          people management > 10, total ~20 experience
-        </v-card-text>
-        <v-card-text style="padding-bottom: 0%; padding-top: 2%;">
-          <font-awesome-icon
-            icon="fa-solid fa-industry"
+          <TLDREntry
+            title="experience"
+            text="people management 10, total 18"
+            :color="tldrColor"
           />
-          gaming, geospatial, digital ads, moving
-        </v-card-text>
-        <v-card-text style="padding-top: 2%;">
-          <font-awesome-icon
-            icon="fa-solid fa-graduation-cap"
+          <TLDREntry
+            title="industries"
+            text="gaming, geospatial, digital ads, moving"
+            :color="tldrColor"
           />
-          2006, BSE, Ohio State, 3.67
+          <TLDREntry
+            title="leadership"
+            text="servant leadership, coaching & mentorship, team building"
+            :color="tldrColor"
+          />
+          <TLDREntry
+            title="product management"
+            text="discovery, rapid prototyping, dual-track agile"
+            :color="tldrColor"
+          />
+          <TLDREntry
+            title="engineering practices"
+            text="agile, devops, delivery management, quality assurance"
+            :color="tldrColor"
+          />
+          <TLDREntry
+            title="software design"
+            text="domain-driven design, distributed systems, microservices"
+            :color="tldrColor"
+          />
+          <TLDREntry
+            title="eduction"
+            text="2006, BSE, Ohio State, 3.67"
+            :color="tldrColor"
+          />
         </v-card-text>
       </v-card>
     </v-col>

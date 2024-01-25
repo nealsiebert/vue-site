@@ -1,9 +1,9 @@
 <script setup lang="ts">
-  import pricepoint from './WorkHistory/pricepoint.md?raw';
-  import yodle from './WorkHistory/yodle.md?raw';
-  import terrago from './WorkHistory/terrago.md?raw';
-  import doubleHelix from './WorkHistory/doubleHelix.md?raw';
-import { ref } from 'vue';
+  import pricepoint from '../assets/pricepoint.md?raw';
+  import yodle from '../assets/yodle.md?raw';
+  import terrago from '../assets/terrago.md?raw';
+  import doubleHelix from '../assets/doubleHelix.md?raw';
+  import { ref } from 'vue';
   const workHistory = [{
     title: 'PricePoint, 2017 - 2024',
     markdown: pricepoint,
