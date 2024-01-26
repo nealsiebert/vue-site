@@ -9,6 +9,10 @@
     drawer: boolean
   }>();
   const emit = defineEmits(['drawer-toggle']);
+  // this just keeps track of the state of the drawer
+  // if it doesn't match the existing props
+  // we emit an event so the parent can
+  // change the prop
   const drawer = computed({
     get: () => props.drawer,
     set: (newDrawer) => {

@@ -6,6 +6,9 @@
   import _ from 'lodash';
   import { useBlogPostsStore } from '../../store'
   const blogPosts = useBlogPostsStore();
+  // make a copy of the value so we
+  // can watch for changes and debounce
+  // to be sure we aren't spamming search updates
   const textValue = ref(blogPosts.searchFilter);
   watch(textValue, _.debounce((search: string | null) => {
     if (search === '') {

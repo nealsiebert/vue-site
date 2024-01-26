@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// based on https://github.com/cloudacy/vue-markdown-render
+// I adapted it to be a single file component as part of
+// learning vue, it is not complicated
 import MarkdownIt, {
   Options as MarkdownItOptions,
   PluginSimple,

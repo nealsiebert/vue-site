@@ -27,6 +27,7 @@ export default function createSort(
       get: () => field.value,
       set: (sortField) => {
         field.value = sortField;
+        // we changed the sort go to page 1
         pageNumber.value = 0;
       }
     }),
@@ -34,6 +35,7 @@ export default function createSort(
       get: ()=> order.value,
       set: (sortOrder) => {
         order.value = sortOrder;
+        // we changed the sort go to page 1
         pageNumber.value = 0;
       }
     })

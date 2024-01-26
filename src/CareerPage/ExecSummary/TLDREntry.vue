@@ -1,5 +1,9 @@
 <script setup lang="ts">
- import colors from 'vuetify/util/colors';
+  // this is a custom component that renders a card for each
+  // of the entries in the tldr list, sets a download option if
+  // there is a passed in href and only shows the text if it exists
+  // this is all for the resume.docx entry
+  import colors from 'vuetify/util/colors';
   const {
     href,
     title,

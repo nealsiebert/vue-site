@@ -1,3 +1,8 @@
+<script setup lang="ts">
+// nothing really interesting here, just a couple of places
+// where clicking on something lands you on the blog with content
+// filters already in place
+</script>
 <template>
   <v-row>
     <v-col

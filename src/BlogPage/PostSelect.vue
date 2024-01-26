@@ -9,6 +9,9 @@
   import PostsPreview from '../PostsPreview.vue'
   const blogPosts = useBlogPostsStore();
   defineEmits(['filterToggle'])
+  // a list of posts with the toggle for the filter drawer, text entry for the search,
+  // and pagination controls since this is already the blog page we just update
+  // the store on click
 </script>
 
 <template>

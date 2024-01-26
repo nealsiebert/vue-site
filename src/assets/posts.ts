@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import initialCommit from '../../../assets/posts/initialCommit.md?raw';
-import startup1 from '../../../assets/posts/startup1.md?raw';
-import dogTraining1 from '../../../assets/posts/dogTraining1.md?raw';
-import personalSite1 from '../../../assets/posts/personalSite1.md?raw';
+import initialCommit from './posts/initialCommit.md?raw';
+import startup1 from './posts/startup1.md?raw';
+import dogTraining1 from './posts/dogTraining1.md?raw';
+import personalSite1 from './posts/personalSite1.md?raw';
 
 // the stick post when you visit the blog page
 export const stickyTitle = 'initial commit';
@@ -23,7 +23,7 @@ export type Post = {
   series?: string
 }
 
-export default function postsImpl(): Post[] {
+export default function posts(): Post[] {
   const posts= [{
     title: stickyTitle,
     date: new Date(Date.UTC(2024,0,18)).toDateString(),

@@ -8,7 +8,7 @@ import {
 import postsImpl, {
   stickyTitle,
   Post
-} from './posts/postsImpl';
+} from '../../assets/posts';
 import createSort, { 
   SortField,
   SortOrder,
@@ -33,6 +33,8 @@ export {
 }
 
 export default function createPosts(
+  // we need this so whenever a sort is changed
+  // we can go back to page 1
   pageNumber: WritableComputedRef<number>
 ): {
   sortField: WritableComputedRef<SortField | null>

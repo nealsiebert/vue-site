@@ -8,6 +8,9 @@
     blogPosts.resetStore();
   });
   const router = useRouter();
+  // if the user clicks on a post we
+  // want to go to the blog and bring
+  // up the post, same as /blog?title=${title}
   function selectPost(title: string) {
     router.push({
       path: '/blog',

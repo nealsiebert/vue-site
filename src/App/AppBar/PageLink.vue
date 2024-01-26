@@ -8,20 +8,20 @@
     icon: string
     text: string
   }>();
+  // page link is smart enough to change
+  // from displaying text when the window is
+  // big to displaying an icon when its small
 </script>
 <template>
   <router-link
     :to="to"
     class="hidden-sm-and-down"
   >
-    <v-icon
-      :icon="icon"
-    />
     {{ text }}
   </router-link>
   <router-link
     :to="to"
-    class="hidden-md-and-up"
+    class="hidden-lg-and-up"
   >
     <v-icon
       :icon="icon"

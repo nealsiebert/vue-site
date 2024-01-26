@@ -4,6 +4,9 @@
   import terrago from '../assets/terrago.md?raw';
   import doubleHelix from '../assets/doubleHelix.md?raw';
   import { ref } from 'vue';
+  // load markdown and create a list of work history
+  // then the template iterates over it a displays
+  // the markdown using a custom tag
   const workHistory = [{
     title: 'PricePoint, 2017 - 2024',
     markdown: pricepoint,

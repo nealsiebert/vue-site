@@ -10,6 +10,9 @@ import {
 
 export const defaultPageSize = 10;
 
+// get all the pages and the current page based
+// on page number, we chunk pages based on 
+// pate length
 export default function createPages(
   posts: ComputedRef<Post[]>,
   pageLength: WritableComputedRef<number>,
@@ -25,7 +28,10 @@ export default function createPages(
     return chunked;
   });
   const page = computed(() => {
+    // make sure the page index is within bounds
     const pageIndex = Math.min(pageNumber.value, pages.value.length - 1);
+    // edge case if we have filtered to a list with no
+    // posts then return an empty array
     return _.defaultTo(pages.value[pageIndex], [])
   });
   const hasPrevPage = computed(() => pageNumber.value > 0);

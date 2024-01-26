@@ -1,4 +1,7 @@
 <script setup lang="ts">
+  // Shared component to render a list of posts
+  // it uses the shave plugin to truncate text
+  // content
   import _ from 'lodash';
   import { Post } from './store'
   const {

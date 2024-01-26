@@ -2,6 +2,11 @@ import shave from 'shave';
 import _ from 'lodash';
 import { App } from 'vue';
 
+// This is a vue plugin to allow me to use shave to truncate text.
+// Based on https://github.com/quantity-digital/vue-shave,
+// updated to vue 3 and typescript. This should probably be a fork
+// and I should publish it myself.
+
 type Shaver = {
   el: any
   shaveFn: () => void

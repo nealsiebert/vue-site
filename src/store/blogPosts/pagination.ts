@@ -13,7 +13,9 @@ export default function createPagination(): {
   nextPage: () => void
   prevPage: () => void
 } {
+  // track what page were on
   const pageNum = ref(0);
+  // page number is always >= 0
   const pageNumber = computed({
     get: () => pageNum.value,
     set: (newPageNum) => {
@@ -24,6 +26,8 @@ export default function createPagination(): {
     }
   })
   const pageLen = ref(defaultPageSize);
+  // pageLength must have at least 
+  // one post
   const pageLength = computed({
     get: () => pageLen.value,
     set: (newSize: number) => {

@@ -2,29 +2,29 @@
   import colors from 'vuetify/util/colors'
   import { useBlogPostsStore } from './store'
   import { ref, onBeforeMount } from 'vue';
-  import { LocationQueryValue, useRoute, useRouter } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
   import FilterDrawer from './BlogPage/FilterDrawer.vue'
   import PostSelect from './BlogPage/PostSelect.vue';
   import PostDisplay from './BlogPage/PostDisplay.vue';
   import _ from 'lodash';
- 
-  type Param = LocationQueryValue | LocationQueryValue[];
-  function arrayHelper(
-    param: Param
-  ): string[] {
-    return _.flatten([param]).filter(_.negate(_.isNil)) as string[];
-  }
-
-  function singleHelper(
-    param: Param
-  ): LocationQueryValue {
-    return _.defaultTo(arrayHelper(param)[0], null);
-  }
-
+  import {
+    arrayHelper,
+    singleHelper
+  } from './BlogPage/paramHelpers';
+  // its a blog folks
+  
+  // keep track of the state of the
+  // filter drawer
   const drawer = ref(false);
   function toggleDrawer() {
     drawer.value = !drawer.value;
   }
+
+  // some pages select blog posts or
+  // set filters based on query params
+  // check that here when the page
+  // first mounts and clear the query
+  // params
   const blogPosts = useBlogPostsStore();
   const route = useRoute();
   const router = useRouter();
@@ -44,6 +44,9 @@
       query: {},
     });
   });
+  // below is where we switch between showing the
+  // blog posts content or the blog preview based
+  // on if there is a blogPosts.selectedPost or not
 </script>
 
 <template>

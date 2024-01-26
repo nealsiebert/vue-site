@@ -19,6 +19,7 @@ function filterPosts(
 ): Post[] {
   if (filter) {
     const search = filter.toLowerCase();
+    // just a simple substring search maybe look into doing something more interesting
     return posts.filter((post) => post.content.toLowerCase().includes(search) || post.title.toLowerCase().includes(search))
   }
   return posts;
@@ -52,6 +53,9 @@ function sortByField(
 ): Post[] {
   const sortFieldImpl = _.defaultTo(sortField, defaultSortField);
   if (sortFieldImpl === 'date') {
+    // we need a special date sort because
+    // lexical ordering of the string dates
+    // is not correct
     return _.sortBy(posts, (post) => new Date(post.date))
   }
   return _.sortBy(posts, sortFieldImpl)
@@ -61,8 +65,13 @@ function addSticky(
   posts: Post[],
   sortField: SortField | null,
   sortOrder: SortOrder | null,
+  filter: string | null,
+  tags: string[] | null,
+  series: string[] | null
 ): Post[] {
-  if (sortField === null && sortOrder === null) {
+  if (sortField === null && sortOrder === null && filter === null && tags === null && series === null) {
+    // if we have no sorts or filters find the sticky post and move
+    // it to the front of the list
     const index = posts.findIndex((post) => post.title === stickyTitle);
     if (index >= 0) {
       const stickyPost = posts[index];
@@ -92,6 +101,11 @@ function sort(
   return sorted;
 }
 
+// we need to do all the filtering
+// and sorting, then we check if there 
+// is a sort or filter and if not we 
+// add the sticky post to the front of
+// the list 
 export default function getPosts(
   posts: Post[],
   sortField: SortField | null,
@@ -114,6 +128,9 @@ export default function getPosts(
     ),
     sortField,
     sortOrder,
+    filter,
+    tags,
+    series,
   );
   return filteredAndSorted;
 }

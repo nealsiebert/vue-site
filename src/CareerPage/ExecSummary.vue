@@ -2,7 +2,7 @@
   import summary from '../assets/executiveSummary.md?raw'
   import colors from 'vuetify/util/colors';
   import TLDREntry from './ExecSummary/TLDREntry.vue';
-  const tldrColor = colors.grey.lighten3
+  const tldrColor = colors.grey.lighten3;
 </script>
 
 <template>

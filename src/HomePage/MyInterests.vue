@@ -2,6 +2,10 @@
 import leadership from '../assets/leadership.md?raw';
 import product from '../assets/product.md?raw';
 import engineering from '../assets/engineering.md?raw';
+// there is a lot of markup here, but it boils down to
+// three sections of content if they are clicked
+// we go to the blog page and set a filter
+// to only show posts related to that subject
 </script>
 <template>
   <v-row>

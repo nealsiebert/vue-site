@@ -20,6 +20,7 @@ export default function createSearch(
         } else {
           search.value = searchFilter;
         }
+        // we changed the search go to page 1
         pageNumber.value = 0;
       }
     }),
