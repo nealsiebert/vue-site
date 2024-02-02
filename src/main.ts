@@ -21,23 +21,18 @@ import {
   createWebHistory
 } from 'vue-router';
 import { createPinia } from 'pinia'
-import Home from './HomePage.vue';
-import Career from './CareerPage.vue';
-import Blog from './BlogPage.vue';
-import Post from './PostPage.vue';
-import ErrorPage from './404Page.vue';
 import RenderMarkdownVue from './RenderMarkdown.vue';
 import shave from './shave';
 import { usePagesStore } from './store';
 
 // All my routes
 const routes = [
-  { path: '/', component: Home },
-  { path: '/career', component: Career },
-  { path: '/blog', component: Blog },
-  { path: '/blog/:title', component: Post },
+  { path: '/', component: () => import('./HomePage.vue') },
+  { path: '/career', component: () => import('./CareerPage.vue') },
+  { path: '/blog', component: () => import('./BlogPage.vue') },
+  { path: '/blog/:title', component: () => import('./PostPage.vue') },
   // the 404 page this matches everything
-  { path: '/:pathMatch(.*)*', component: ErrorPage}
+  { path: '/:pathMatch(.*)*', component: () => import('./404Page.vue')}
 ]
 
 const router = createRouter({
@@ -51,7 +46,7 @@ const router = createRouter({
   },
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((_to, from) => {
   const pagesStore = usePagesStore();
   pagesStore.lastPage = from.path;
 });

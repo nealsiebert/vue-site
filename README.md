@@ -10,5 +10,6 @@ This site is deployed by hand to a s3 bucket, which is used as the basis for a c
 ## TODO
 1. Add RSS feed
 1. Deploy automatically
+1. Fix chunk size
 1. Add a table of contents to each post
 1. Figure out a way to crawl the site and make sure every link is live
