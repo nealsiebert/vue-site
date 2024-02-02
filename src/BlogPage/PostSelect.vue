@@ -35,8 +35,8 @@
     </v-toolbar>
     <v-card-text v-if="blogPosts.page.length > 0">
       <PostsPreview
-        lg="6"
-        sm="12"
+        md="6"
+        cols="12"
         :posts="blogPosts.page"
       />      
     </v-card-text>

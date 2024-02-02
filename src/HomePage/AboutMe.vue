@@ -2,26 +2,35 @@
 // nothing really interesting here, just a couple of places
 // where clicking on something lands you on the blog with content
 // filters already in place
+import { onUpdated, onMounted } from 'vue';
+import { useDisplay } from 'vuetify';
+const display = useDisplay();
+onMounted(() => {
+  console.log(display.name.value);
+})
+onUpdated(() => {
+  console.log(display.name.value);
+})
 </script>
 <template>
   <v-row>
     <v-col
-      lg="6"
-      sm="12"
+      cols="12"
+      md="6"
     >
       <v-card>
         <v-card-text>
           <v-img
             alt="Neal Siebert Portrait"
             src="/home-page2.jpg"
-            max-height="512px"
+            height="512px"
           />
         </v-card-text>
       </v-card>
     </v-col>
     <v-col 
-      lg="6"
-      sm="12"
+      cols="12"
+      md="6"
     >
       <v-card min-height="100%">
         <v-card-title class="text-center">

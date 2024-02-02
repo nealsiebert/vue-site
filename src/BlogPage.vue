@@ -62,8 +62,8 @@
           class="hidden-sm-and-down"
         />
         <v-col 
-          sm="12"
-          lg="10"
+          cols="12"
+          md="10"
         >
           <PostSelect 
             @filter-toggle="toggleDrawer" 

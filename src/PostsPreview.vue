@@ -6,12 +6,12 @@
   import { Post } from './store'
 import { useRouter } from 'vue-router';
   const {
-    lg,
-    sm,
+    cols,
+    md,
     posts
   } = defineProps<{
-    lg: string
-    sm: string
+    md: string
+    cols: string
     posts: Post[]
   }>();
   const router = useRouter()
@@ -23,8 +23,8 @@ import { useRouter } from 'vue-router';
       <v-col 
         v-for="post in posts"
         :key="post.title"
-        :lg="lg"
-        :sm="sm"
+        :md="md"
+        :cols="cols"
       >
         <v-card
           :title="post.title"

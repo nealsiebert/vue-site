@@ -20,8 +20,8 @@
         </v-card-title>
         <v-card-text>
           <PostsPreview 
-            lg="4"
-            sm="12"
+            md="4"
+            cols="12"
             :posts="blogPosts.recent"
           />
         </v-card-text>
