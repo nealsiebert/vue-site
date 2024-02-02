@@ -4,6 +4,7 @@
   // content
   import _ from 'lodash';
   import { Post } from './store'
+import { useRouter } from 'vue-router';
   const {
     lg,
     sm,
@@ -13,7 +14,7 @@
     sm: string
     posts: Post[]
   }>();
-  defineEmits(['selectPost'])
+  const router = useRouter()
 </script>
 
 <template>
@@ -27,10 +28,26 @@
       >
         <v-card
           :title="post.title"
-          :subtitle="post.date"
           variant="outlined"
-          @click="$emit('selectPost', post.title)"
+          min-height="100%"
+          @click="() => router.push({
+            path: `/blog/${encodeURIComponent(post.title)}`
+          })"
         >
+          <v-card-subtitle>
+            {{ post.date }}
+          </v-card-subtitle>
+          <v-card-subtitle>
+            Series: {{ _.startCase(_.defaultTo(post.series, '')) }}
+          </v-card-subtitle>
+          <v-card-subtitle>
+            Tags: <v-chip
+              v-for="(tag, i) in post.tags"
+              :key="i"
+            >
+              {{ tag }}
+            </v-chip>
+          </v-card-subtitle>
           <v-card-text
             v-shave="{ height: 256 }"
             height="100%"

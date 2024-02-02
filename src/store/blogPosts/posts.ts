@@ -37,6 +37,7 @@ export default function createPosts(
   // we can go back to page 1
   pageNumber: WritableComputedRef<number>
 ): {
+  allPosts: ComputedRef<Post[]>
   sortField: WritableComputedRef<SortField | null>
   sortOrder: WritableComputedRef<SortOrder | null>
   searchFilter: WritableComputedRef<string | null>
@@ -51,6 +52,8 @@ export default function createPosts(
   // made a server yet so this is just a list of
   // markdown files
   const sourcePosts = ref(postsImpl());
+  const allPosts = computed(() => sourcePosts.value);
+  const availablePosts = computed(() => allPosts.value.filter((post)=> !post.hidden))
   // setup an the reactive types that
   // the posts list relies on
   const {
@@ -63,14 +66,14 @@ export default function createPosts(
   const {
     tagFilter,
     tags,
-  } = createTags(sourcePosts, pageNumber);
+  } = createTags(availablePosts, pageNumber);
   const {
     seriesFilter,
     series,
-  } = createSeries(sourcePosts, pageNumber);
+  } = createSeries(availablePosts, pageNumber);
   // do all the searching and filtering
   const posts = computed(() => computePosts(
-    sourcePosts.value,
+    availablePosts.value,
     sortField.value,
     sortOrder.value,
     searchFilter.value,
@@ -78,6 +81,7 @@ export default function createPosts(
     seriesFilter.value,
   ));
   return {
+    allPosts,
     sortField,
     sortOrder,
     searchFilter,

@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { computed } from 'vue';
+  import _ from 'lodash';
   import {
     sortFields,
     sortOrders,
@@ -22,6 +23,7 @@
     }
   });
   const blogStore = useBlogPostsStore();
+  const series = computed(() => blogStore.series.map(_.startCase));
 </script>
 <template>
   <v-navigation-drawer
@@ -41,18 +43,18 @@
       clearable
     />
     <v-select
-      v-model="blogStore.tagFilter"
+      v-model="blogStore.seriesFilter"
       chips
-      label="Tag"
-      :items="blogStore.tags"
+      label="Series"
+      :items="series"
       multiple
       clearable
     />
     <v-select
-      v-model="blogStore.seriesFilter"
+      v-model="blogStore.tagFilter"
       chips
-      label="Series"
-      :items="blogStore.series"
+      label="Tag"
+      :items="blogStore.tags"
       multiple
       clearable
     />

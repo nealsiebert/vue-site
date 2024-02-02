@@ -1,5 +1,4 @@
 import { 
-  ref,
   computed
 } from 'vue';
 import { defineStore } from 'pinia';
@@ -37,6 +36,7 @@ const blogPostStore = defineStore('blogPosts', () => {
   // the list of posts, the posts returned by this function
   // is reactive and will always reflect the sorting and filtering
   const {
+    allPosts,
     sortField,
     sortOrder,
     searchFilter,
@@ -55,17 +55,7 @@ const blogPostStore = defineStore('blogPosts', () => {
     hasPrevPage,
     hasNextPage,
   } = createPages(posts, pageLength, pageNumber);
-
-  // select a post
-  const selected = ref(undefined as undefined | Post);
-  // export a computed ref we don't want to let
-  // people just set this to anything that looks
-  // like a post
-  const selectedPost = computed(() => selected.value);
-  function selectPost(title: string | undefined | null) {
-    selected.value = posts.value.find((post) => post.title === title);
-  }
-
+  
   // for the preview on the home page
   const recent = computed(
     () => _(posts.value)
@@ -78,7 +68,6 @@ const blogPostStore = defineStore('blogPosts', () => {
   // make a reset function so on page navigation
   // we can clear everything
   function resetStore() {
-    selected.value = undefined;
     pageLength.value = defaultPageSize;
     searchFilter.value = null;
     sortField.value = null;
@@ -88,6 +77,8 @@ const blogPostStore = defineStore('blogPosts', () => {
   }
 
   return {
+    allPosts,
+    posts,
     // filtering and sorting
     sortField,
     sortOrder,
@@ -107,9 +98,6 @@ const blogPostStore = defineStore('blogPosts', () => {
     hasNextPage,
     nextPage,
     prevPage,
-    // selection
-    selectedPost,
-    selectPost,
     // cleanup
     resetStore,
   };

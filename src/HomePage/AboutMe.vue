@@ -33,19 +33,16 @@
           <router-link to="/career">here</router-link>, 
           visit me on <a href="https://www.linkedin.com/in/nealsiebert/">LinkedIn</a>, or contact me at <a href="mailto:nealsiebert@gmail.com">nealsiebert@gmail.com</a>
           <br><br>
-      
-          I am also interested in how to use technologies that are new, or new to me at least. 
-          I believe that technologies are meant to be used to solve a problem, so I pair those investigations with a product idea.
           <!-- eslint-disable-next-line -->
-          You can see some of the work I have done <router-link to="/blog?series=personal site">this site</router-link>, <router-link to="/blog?series=dog training app">dog training app</router-link>, or just go check out my <router-link to="/blog">blog</router-link>. 
+          What I love about building software is how fast things change. There is always something new to learn, to play around with. I am just starting a new <router-link to="/blog">blog</router-link> where
+          I will be exploring new technologies by solving real world problems using modern product management techniques.
+          <br><br>
+          <!-- eslint-disable-next-line -->
+          If you are interested I am currently writing about making my own blog using <router-link to="/blog/I%20need%20a%20website">Vue</router-link>, my experiences as Head of Engineering at <router-link to="/blog?series=bootstrap startup">PricePoint</router-link>,
+          <!-- eslint-disable-next-line -->
+          and trying to help my dog Bear with his <router-link to="/blog?series=dog training app">separation anxiety</router-link>. 
         </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 </template>
-
-<style scoped>
-a {
-  color: inherit;
-}
-</style>

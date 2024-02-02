@@ -15,7 +15,6 @@
     text?: string | undefined
     color: string
   }>();
-  const download = !!href;
   const showText = !!text;
   const style = {
     'padding-top': '0%',
@@ -29,7 +28,7 @@
   <v-card
     :color="color"
     :href="href"
-    :download="download"
+    download
   >
     <v-card-text 
       style="padding-top: 0%; padding-bottom: 2%;"

@@ -1,24 +1,11 @@
 <script setup lang="ts">
   import { useBlogPostsStore } from '../store';
   import { onBeforeMount } from 'vue';
-  import { useRouter } from 'vue-router';
   import PostsPreview from '../PostsPreview.vue';
   const blogPosts = useBlogPostsStore();
   onBeforeMount(() => {
     blogPosts.resetStore();
   });
-  const router = useRouter();
-  // if the user clicks on a post we
-  // want to go to the blog and bring
-  // up the post, same as /blog?title=${title}
-  function selectPost(title: string) {
-    router.push({
-      path: '/blog',
-      query: {
-        title,
-      }
-    });
-  }
 </script>
 
 <template>
@@ -36,7 +23,6 @@
             lg="4"
             sm="12"
             :posts="blogPosts.recent"
-            @select-post="(title) => selectPost(title)"
           />
         </v-card-text>
       </v-card>

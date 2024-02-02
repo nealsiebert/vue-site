@@ -132,5 +132,5 @@ export default function getPosts(
     tags,
     series,
   );
-  return filteredAndSorted;
+  return filteredAndSorted.filter((post) => !post.hidden);
 }

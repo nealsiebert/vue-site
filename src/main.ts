@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import 'vuetify/styles'
+import './style.css'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
 import { fa } from 'vuetify/iconsets/fa-svg';
 import { createVuetify } from 'vuetify'
@@ -23,15 +24,18 @@ import { createPinia } from 'pinia'
 import Home from './HomePage.vue';
 import Career from './CareerPage.vue';
 import Blog from './BlogPage.vue';
+import Post from './PostPage.vue';
 import ErrorPage from './404Page.vue';
-import RenderMarkdownVue from './RenderMarkdown.vue'
+import RenderMarkdownVue from './RenderMarkdown.vue';
 import shave from './shave';
+import { usePagesStore } from './store';
 
 // All my routes
 const routes = [
   { path: '/', component: Home },
   { path: '/career', component: Career },
   { path: '/blog', component: Blog },
+  { path: '/blog/:title', component: Post },
   // the 404 page this matches everything
   { path: '/:pathMatch(.*)*', component: ErrorPage}
 ]
@@ -41,10 +45,15 @@ const router = createRouter({
   routes,
   // make sure when we change pages we go back to the top
   // of the page
-  scrollBehavior(/*to, from, savedPosition*/) {
+  scrollBehavior(/*to, from,  savedPosition */) {
     // always scroll to top
     return { top: 0 }
   },
+});
+
+router.beforeEach((to, from) => {
+  const pagesStore = usePagesStore();
+  pagesStore.lastPage = from.path;
 });
 
 // only use the icons I need

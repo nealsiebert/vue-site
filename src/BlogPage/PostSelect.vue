@@ -33,14 +33,19 @@
       <v-spacer />
       <Pagination />
     </v-toolbar>
-    <v-card-text>
+    <v-card-text v-if="blogPosts.page.length > 0">
       <PostsPreview
         lg="6"
         sm="12"
         :posts="blogPosts.page"
-        @select-post="(title) => blogPosts.selectPost(title)"
       />      
     </v-card-text>
+    <v-card-title
+      v-if="blogPosts.page.length === 0"
+      style="text-align: center;"
+    >
+      I'm sorry, I this content isn't available yet. Please check back soon.     
+    </v-card-title>
     <v-toolbar
       color="white"
     >

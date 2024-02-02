@@ -1,71 +1,157 @@
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras
-dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
-enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
-imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-ultricies nisi. Nam eget dui. Etiam rhoncus.\
-\
-Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
-libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
-vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
-tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis
-leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
-Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum
-purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam
-accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla.
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium
-turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec,
-imperdiet iaculis, ipsum.\
-\
-Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer
-eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper
-ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium
-libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam
-nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed
-lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo
-pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.
-Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi.
-Curabitur ligula sapien, tincidunt non, euismod vitae, posuere
-imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed
-cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus
-accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci
-luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis
-porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis
-orci.\
-\
-Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum
-sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet
-augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere,
-tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna
-dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a,
-suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac
-venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit
-pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et
-ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt
-libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque
-ut neque. Pellentesque habitant morbi tristique senectus et netus et
-malesuada fames ac turpis egestas. In dui magna, posuere eget,
-vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada
-pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta
-a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede.
-Pellentesque habitant morbi tristique senectus et netus et malesuada
-fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat.
-Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse
-platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur
-a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit.
-Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero
-tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit.
-Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros
-vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et
-hendrerit aliquet, dolor diam sagittis ligula, eget egestas\
-\
+An h1 header
+============
+
+Paragraphs are separated by a blank line.
+
+2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
+look like:
+
+  * this one
+  * that one
+  * the other one
+
+Note that --- not considering the asterisk --- the actual text
+content starts at 4-columns in.
+
+> Block quotes are
+> written like so.
+>
+> They can span multiple paragraphs,
+> if you like.
+
+Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
+in chapters 12--14"). Three dots ... will be converted to an ellipsis.
+Unicode is supported. ☺
+
+
+
+An h2 header
+------------
+
+Here's a numbered list:
+
+ 1. first item
+ 2. second item
+ 3. third item
+
+Note again how the actual text starts at 4 columns in (4 characters
+from the left side). Here's a code sample:
+
+    # Let me re-iterate ...
+    for i in 1 .. 10 { do-something(i) }
+
+As you probably guessed, indented 4 spaces. By the way, instead of
+indenting the block, you can use delimited blocks, if you like:
+
+~~~
+define foobar() {
+    print "Welcome to flavor country!";
+}
+~~~
+
+(which makes copying & pasting easier). You can optionally mark the
+delimited block for Pandoc to syntax highlight it:
+
+~~~python
+import time
+# Quick, count to ten!
+for i in range(10):
+    # (but not *too* quick)
+    time.sleep(0.5)
+    print i
+~~~
+
+
+
+### An h3 header ###
+
+Now a nested list:
+
+ 1. First, get these ingredients:
+
+      * carrots
+      * celery
+      * lentils
+
+ 2. Boil some water.
+
+ 3. Dump everything in the pot and follow
+    this algorithm:
+
+        find wooden spoon
+        uncover pot
+        stir
+        cover pot
+        balance wooden spoon precariously on pot handle
+        wait 10 minutes
+        goto first step (or shut off burner when done)
+
+    Do not bump wooden spoon or it will fall.
+
+Notice again how text always lines up on 4-space indents (including
+that last line which continues item 3 above).
+
+Here's a link to [a website](http://foo.bar), to a [local
+doc](local-doc.html), and to a [section heading in the current
+doc](#an-h2-header). Here's a footnote [^1].
+
+[^1]: Footnote text goes here.
+
+Tables can look like this:
+
+size  material      color
+----  ------------  ------------
+9     leather       brown
+10    hemp canvas   natural
+11    glass         transparent
+
+Table: Shoes, their sizes, and what they're made of
+
+(The above is the caption for the table.) Pandoc also supports
+multi-line tables:
+
+--------  -----------------------
+keyword   text
+--------  -----------------------
+red       Sunsets, apples, and
+          other red or reddish
+          things.
+
+green     Leaves, grass, frogs
+          and other things it's
+          not easy being.
+--------  -----------------------
+
+A horizontal rule follows.
+
+***
+
+Here's a definition list:
+
+apples
+  : Good for making applesauce.
+oranges
+  : Citrus!
+tomatoes
+  : There's no "e" in tomatoe.
+
+Again, text is indented 4 spaces. (Put a blank line between each
+term/definition pair to spread things out more.)
+
+Here's a "line block":
+
+| Line one
+|   Line too
+| Line tree
+
+and images can be specified like so:
+
+![example image](example-image.jpg "An exemplary image")
+
+Inline math equations go in like so: $\omega = d\phi / dt$. Display
+math should get its own line and be put in in double-dollarsigns:
+
+$$I = \int \rho R^{2} dV$$
+
+And note that you can backslash-escape any punctuation characters
+which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.

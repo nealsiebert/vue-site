@@ -67,6 +67,5 @@ import engineering from '../assets/engineering.md?raw';
 <style scoped>
 a {
   text-decoration: none;
-  color: inherit;
 }
 </style>

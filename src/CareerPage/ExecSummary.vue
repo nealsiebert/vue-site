@@ -17,7 +17,7 @@
         :color="tldrColor"
       >
         <v-card-text>
-          <v-card-title>TLDR;</v-card-title>
+          <v-card-title>tldr;</v-card-title>
           <TLDREntry
             href="/resume.docx"
             title="resume.docx"
@@ -26,11 +26,6 @@
           <TLDREntry
             title="experience"
             text="people management 10, total 18"
-            :color="tldrColor"
-          />
-          <TLDREntry
-            title="industries"
-            text="gaming, geospatial, digital ads, moving"
             :color="tldrColor"
           />
           <TLDREntry

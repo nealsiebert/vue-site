@@ -25,7 +25,7 @@ export default function createSeries(
           series.value = null;
         } else {
           // always use unique lowercased versions
-          series.value = _(newValue).uniq().map((value)=> value.toLowerCase()).value();
+          series.value = _(newValue).uniq().value();
         }
         // changed sort go to page 1
         pageNumber.value = 0;
@@ -33,7 +33,10 @@ export default function createSeries(
     }),
     // this is all the possible series filters
     series: computed(
-      () => _(posts.value).map((post) => post.series).uniq().filter(_.negate(_.isNil)).value() as string[]
+      () => _(posts.value).map((post) => post.series)
+        .uniq()
+        .filter(_.negate(_.isNil))
+        .value() as string[]
     )
   }
 }
