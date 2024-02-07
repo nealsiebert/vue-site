@@ -16,7 +16,7 @@
         min-height="100%"
       >
         <v-card-title class="text-center">
-          I Write Stuff Too
+          Stuff I Have Written
         </v-card-title>
         <v-card-text>
           <PostsPreview 

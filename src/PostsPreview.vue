@@ -35,7 +35,7 @@ import { useRouter } from 'vue-router';
           })"
         >
           <v-card-subtitle>
-            {{ post.date }}
+            {{ post.date.toDateString() }}
           </v-card-subtitle>
           <v-card-subtitle>
             Series: {{ _.startCase(_.defaultTo(post.series, '')) }}

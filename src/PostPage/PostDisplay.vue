@@ -21,7 +21,7 @@
       />
     </template>
     <v-card-title>{{ post.title }}</v-card-title>
-    <v-card-subtitle>{{ post.date }}</v-card-subtitle>
+    <v-card-subtitle>{{ post.date.toDateString() }}</v-card-subtitle>
     <v-card-subtitle v-if="post.series">
       Series: {{ _.startCase(_.defaultTo(post.series, '')) }}
     </v-card-subtitle>

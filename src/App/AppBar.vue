@@ -2,7 +2,7 @@
     import {
     mdiHome,
     mdiBriefcase,
-    mdiRssBox
+    mdiPost
   } from '@mdi/js'
   import colors from 'vuetify/util/colors';
   import PageLink from './AppBar/PageLink.vue';
@@ -28,10 +28,18 @@
     <v-spacer />
     <PageLink
       to="/blog"
-      :icon="mdiRssBox"
+      :icon="mdiPost"
       text="Blog"
     />
     <v-spacer />
+    <v-btn
+      href="mailto:info@nealsiebert.com"
+      icon
+    >
+      <v-icon
+        icon="fa:fas fa-envelope"
+      />
+    </v-btn>
     <v-btn
       href="https://www.linkedin.com/in/nealsiebert/"
       icon
@@ -46,14 +54,6 @@
     >
       <v-icon
         icon="fa:fab fa-github"
-      />
-    </v-btn>
-    <v-btn
-      href="mailto:nealsiebert@gmail.com"
-      icon
-    >
-      <v-icon
-        icon="fa:fas fa-envelope"
       />
     </v-btn>
   </v-app-bar>

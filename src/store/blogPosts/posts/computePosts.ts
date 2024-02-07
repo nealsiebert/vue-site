@@ -56,7 +56,7 @@ function sortByField(
     // we need a special date sort because
     // lexical ordering of the string dates
     // is not correct
-    return _.sortBy(posts, (post) => new Date(post.date))
+    return _.sortBy(posts, (post) => post.date)
   }
   return _.sortBy(posts, sortFieldImpl)
 }

@@ -7,10 +7,11 @@ import { useDisplay } from 'vuetify';
 const display = useDisplay();
 onMounted(() => {
   console.log(display.name.value);
-})
+});
 onUpdated(() => {
   console.log(display.name.value);
-})
+});
+
 </script>
 <template>
   <v-row>
@@ -37,21 +38,20 @@ onUpdated(() => {
           About Me
         </v-card-title>
         <v-card-text class="text-center">
-          Hi, I'm Neal, when I am not hiking in a suit I build software. I have been a senior engineering leader, software engineer, and gameplay programmer. If you would like to know more about my professional credentials please head over
+          Hi, I'm Neal. Sometime I hike in a suit, most of the time I make software. I have been a software engineer for 18 years working in the video game, GIS, ad tech, and moving industries.
+          I've built software for XBox, Playstation, Wii, Windows, Linux, IOS, Android, and the web. For the past 10 years I have been building product development teams and organizations.
           <!-- eslint-disable-next-line -->
-          <router-link to="/career">here</router-link>, 
-          visit me on <a href="https://www.linkedin.com/in/nealsiebert/">LinkedIn</a>, or contact me at <a href="mailto:nealsiebert@gmail.com">nealsiebert@gmail.com</a>
+          If you would like to know more about my professional credentials please head over <router-link to="/career">here</router-link>, 
+          visit me on <a href="https://www.linkedin.com/in/nealsiebert/">LinkedIn</a>, or contact me at <a href="mailto:info@nealsiebert.com">info@nealsiebert.com</a>
           <br><br>
           <!-- eslint-disable-next-line -->
-          What I love about building software is how fast things change. There is always something new to learn, to play around with. I am just starting a new <router-link to="/blog">blog</router-link> where
-          I will be exploring new technologies by solving real world problems using modern product management techniques.
-          <br><br>
-          <!-- eslint-disable-next-line -->
-          If you are interested I am currently writing about making my own blog using <router-link to="/blog/I%20need%20a%20website">Vue</router-link>, my experiences as Head of Engineering at <router-link to="/blog?series=bootstrap startup">PricePoint</router-link>,
-          <!-- eslint-disable-next-line -->
-          and trying to help my dog Bear with his <router-link to="/blog?series=dog training app">separation anxiety</router-link>. 
+          I also have a <router-link to="/blog">blog</router-link>. I use writing as tool, to remember something, to process information, or refine and simplify my ideas. 
+          I write a lot. I am going to publish some of of it. In general, I take a more narrative approach than most technology blogs. Context is always important. They didn't set 
+          out to write an unmaintainable mess. Let's design an architecture that doesn't scale, said no one ever. Context is important. I want to talk about the journey, the how 
+          and the why.
         </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 </template>
+

@@ -23,9 +23,10 @@
   <v-text-field
     v-model="textValue"
     hide-details
-    :prepend-icon="mdiMagnify"
+    :prepend-inner-icon="mdiMagnify"
     single-line
     placeholder="Search"
     clearable
+    class="pb-6"
   />
 </template>

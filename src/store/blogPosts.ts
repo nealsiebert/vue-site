@@ -59,7 +59,7 @@ const blogPostStore = defineStore('blogPosts', () => {
   // for the preview on the home page
   const recent = computed(
     () => _(posts.value)
-      .sortBy((post) => new Date(post.date))
+      .sortBy((post) => post.date)
       .reverse()
       .slice(0, 6)
       .value()

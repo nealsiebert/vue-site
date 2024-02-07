@@ -14,6 +14,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faEnvelope,
+  faRss,
+  faEllipsisVertical,
 } from '@fortawesome/free-solid-svg-icons'
 import App from './App.vue'
 import { 
@@ -57,6 +59,8 @@ library
   faLinkedin,
   faGithub,
   faEnvelope,
+  faRss,
+  faEllipsisVertical,
 )
 
 const vuetify = createVuetify({

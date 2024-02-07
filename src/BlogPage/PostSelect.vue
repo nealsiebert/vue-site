@@ -5,7 +5,6 @@
   import _ from 'lodash';
   import { useBlogPostsStore } from '../store'
   import Pagination from './PostSelect/PostPagination.vue'
-  import Search from './PostSelect/PostSearch.vue'
   import PostsPreview from '../PostsPreview.vue'
   const blogPosts = useBlogPostsStore();
   defineEmits(['filterToggle'])
@@ -29,9 +28,14 @@
         />
       </v-btn>
       <v-spacer />
-      <Search />
-      <v-spacer />
-      <Pagination />
+      <v-btn
+        href="https://www.nealsiebert.com/feed.xml"
+        icon
+      >
+        <v-icon
+          icon="fa:fas fa-rss"
+        />
+      </v-btn>
     </v-toolbar>
     <v-card-text v-if="blogPosts.page.length > 0">
       <PostsPreview

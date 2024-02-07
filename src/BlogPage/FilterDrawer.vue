@@ -6,6 +6,7 @@
     sortOrders,
     useBlogPostsStore,
   } from '../store';
+  import Search from './FilterDrawer/PostSearch.vue'
   const props = defineProps<{
     drawer: boolean
   }>();
@@ -30,6 +31,7 @@
     v-model="drawer"
     temporary
   >
+    <Search />
     <v-select
       v-model="blogStore.sortField"
       label="Sort"
