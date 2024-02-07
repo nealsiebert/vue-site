@@ -2,15 +2,15 @@
 // nothing really interesting here, just a couple of places
 // where clicking on something lands you on the blog with content
 // filters already in place
-import { onUpdated, onMounted } from 'vue';
+import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 const display = useDisplay();
-onMounted(() => {
-  console.log(display.name.value);
-});
-onUpdated(() => {
-  console.log(display.name.value);
-});
+const src = computed(() => {
+  if (display.lgAndUp.value) {
+    return 'home-page-browser.jpg';
+  }
+  return 'home-page-mobile.jpg';
+})
 
 </script>
 <template>
@@ -23,7 +23,7 @@ onUpdated(() => {
         <v-card-text>
           <v-img
             alt="Neal Siebert Portrait"
-            src="/home-page2.jpg"
+            :src="src"
             height="512px"
           />
         </v-card-text>

@@ -59,7 +59,7 @@
     <v-container>
       <v-row>
         <v-spacer
-          class="hidden-sm-and-down"
+          class="hidden-md-and-down"
         />
         <v-col 
           cols="12"
@@ -70,7 +70,7 @@
           />
         </v-col>
         <v-spacer
-          class="hidden-sm-and-down"
+          class="hidden-md-and-down"
         />
       </v-row>
     </v-container>

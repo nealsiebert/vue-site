@@ -15,7 +15,7 @@
 <template>
   <router-link
     :to="to"
-    class="hidden-sm-and-down"
+    class="hidden-md-and-down"
   >
     {{ text }}
   </router-link>

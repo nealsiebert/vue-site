@@ -6,8 +6,16 @@
   import { useBlogPostsStore } from '../store'
   import Pagination from './PostSelect/PostPagination.vue'
   import PostsPreview from '../PostsPreview.vue'
+  import { computed } from 'vue';
   const blogPosts = useBlogPostsStore();
   defineEmits(['filterToggle'])
+  const filters = computed(()=> {
+    return _.sum([
+      _.defaultTo(blogPosts.tagFilter?.length, 0),
+      _.defaultTo(blogPosts.seriesFilter?.length, 0),
+      blogPosts.searchFilter ? 1 : 0,
+  ])
+  })
   // a list of posts with the toggle for the filter drawer, text entry for the search,
   // and pagination controls since this is already the blog page we just update
   // the store on click
@@ -21,12 +29,19 @@
     <v-toolbar
       color="white"
     >
-      <v-btn icon>
-        <v-icon
-          :icon="mdiFilter"
-          @click="$emit('filterToggle')"
-        />
-      </v-btn>
+      <v-badge
+        :content="filters"
+        :dot="filters === 0"
+        inline
+        max="9"
+      >
+        <v-btn icon>
+          <v-icon
+            :icon="mdiFilter"
+            @click="$emit('filterToggle')"
+          />
+        </v-btn>
+      </v-badge>
       <v-spacer />
       <v-btn
         href="https://www.nealsiebert.com/feed.xml"
