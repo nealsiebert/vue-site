@@ -4,6 +4,7 @@ import useBlogPostsStore, {
   sortOrders,
 } from './store/blogPosts';
 import usePagesStore from './store/pages';
+import useMailchimpStore from './store/mailchimp';
 
 export type {
   Post,
@@ -14,4 +15,5 @@ export {
   sortFields,
   sortOrders,
   usePagesStore,
+  useMailchimpStore,
 }

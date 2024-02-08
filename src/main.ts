@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import Vue, { createApp } from 'vue'
 import 'vuetify/styles'
 import './style.css'
 import { aliases, mdi } from 'vuetify/iconsets/mdi-svg';
@@ -85,8 +85,8 @@ const vuetify = createVuetify({
 
 const pinia = createPinia();
 
-createApp(App)
-.use(vuetify)
+const app = createApp(App);
+app.use(vuetify)
 .use(router)
 .use(pinia)
 // add our custom plugin
@@ -96,4 +96,5 @@ createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 // add our custom tag
 .component('render-markdown', RenderMarkdownVue)
-.mount('#app')
+.mount('#app');
+

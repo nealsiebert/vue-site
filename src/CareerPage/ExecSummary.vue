@@ -25,7 +25,7 @@
           />
           <TLDREntry
             title="experience"
-            text="people management 10, total 18"
+            text="management 10, total 18"
             :color="tldrColor"
           />
           <TLDREntry

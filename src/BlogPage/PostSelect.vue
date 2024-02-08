@@ -3,11 +3,13 @@
     mdiFilter,
   } from '@mdi/js'
   import _ from 'lodash';
-  import { useBlogPostsStore } from '../store'
+  import { useBlogPostsStore, useMailchimpStore } from '../store'
   import Pagination from './PostSelect/PostPagination.vue'
   import PostsPreview from '../PostsPreview.vue'
   import { computed } from 'vue';
+  import colors from 'vuetify/util/colors'
   const blogPosts = useBlogPostsStore();
+  const mailchimpStore = useMailchimpStore();
   defineEmits(['filterToggle'])
   const filters = computed(()=> {
     return _.sum([
@@ -27,30 +29,61 @@
     min-height="100%"
   >
     <v-toolbar
-      color="white"
+      :color="colors.grey.lighten2"
     >
-      <v-badge
-        :content="filters"
-        :dot="filters === 0"
-        inline
-        max="9"
-      >
-        <v-btn icon>
+      <v-toolbar-item>
+        <v-badge
+          :content="filters"
+          :dot="filters === 0"
+          inline
+          max="9"
+        >
+          <v-btn icon>
+            <v-icon
+              :icon="mdiFilter"
+              @click="$emit('filterToggle')"
+            />
+          </v-btn>
+        </v-badge>
+      </v-toolbar-item>
+      <v-spacer />
+      <v-toolbar-item>
+        <v-responsive
+          class="mx-auto"
+          width="256"
+        >
+          <v-text-field
+            v-model="mailchimpStore.email"
+            :loading="mailchimpStore.loading"
+            :error="!mailchimpStore.valid && mailchimpStore.email !== ''"
+            density="compact"
+            single-line
+            hide-details="auto"
+            label="Email address"
+            placeholder="johndoe@gmail.com"
+            type="email"
+          />
+        </v-responsive>
+      </v-toolbar-item>
+      <v-toolbar-item>
+        <v-btn
+          text="Subscribe"
+          :disabled="!mailchimpStore.valid"
+          :loading="mailchimpStore.loading"
+          @click="() => mailchimpStore.subscribe()"
+        />
+      </v-toolbar-item>
+      <v-spacer />
+      <v-toolbar-item>
+        <v-btn
+          href="https://www.nealsiebert.com/feed.xml"
+          icon
+        >
           <v-icon
-            :icon="mdiFilter"
-            @click="$emit('filterToggle')"
+            icon="fa:fas fa-rss"
           />
         </v-btn>
-      </v-badge>
-      <v-spacer />
-      <v-btn
-        href="https://www.nealsiebert.com/feed.xml"
-        icon
-      >
-        <v-icon
-          icon="fa:fas fa-rss"
-        />
-      </v-btn>
+      </v-toolbar-item>
     </v-toolbar>
     <v-card-text v-if="blogPosts.page.length > 0">
       <PostsPreview
