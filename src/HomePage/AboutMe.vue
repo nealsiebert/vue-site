@@ -6,12 +6,14 @@ import { computed } from 'vue';
 import { useDisplay } from 'vuetify';
 const display = useDisplay();
 const src = computed(() => {
-  const aspectRatio = display.width.value / display.height.value;
-  const breakPoint = 1.66;
-  if (display.lgAndUp.value && aspectRatio > breakPoint) {
-    return 'home-page-browser.jpg';
+  const aspectRatio = (display.width.value / display.height.value);
+  if (aspectRatio > 1.5) {
+    return 'home-page-1.5-1.jpg';
   }
-  return 'home-page-mobile.jpg';
+  if (aspectRatio > 1.2) {
+    return 'home-page-1-1.jpg';
+  }
+  return 'home-page-3-5.jpg'
 })
 
 </script>
@@ -26,7 +28,9 @@ const src = computed(() => {
           <v-img
             alt="Neal Siebert Portrait"
             :src="src"
-            height="512px"
+            cover
+            max-height="682"
+            min-height="100%"
           />
         </v-card-text>
       </v-card>
