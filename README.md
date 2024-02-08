@@ -1,6 +1,6 @@
 # Vue-Site
 ## Intro
-This is my personal website, it hosts my blog and links to my personal projects. At the time of writing I did not have any experience with vue and was looking to experiment. This is a pretty straight forward site build with vite, vue, and vuetify. There are a couple of "nice" feature, besides the standard blog stuff of filtering and sorting you can also land on the blog page and set the search, filter, and selected post by query param. This lets my have several places where clicking on cards lands you on the blog with specific content pre-selected for you.
+This is my personal website, it hosts my blog and links to my personal projects. At the time of writing I did not have any experience with vue and was looking to experiment. This is a pretty straight forward site built with vite, vue, and vuetify.
 ## Running
 There are npm scripts to run and build using vite, ```npm run dev``` will start the dev server and ```npm run build``` will generate a production build.
 ## Testing
