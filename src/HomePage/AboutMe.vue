@@ -29,8 +29,6 @@ const src = computed(() => {
             alt="Neal Siebert Portrait"
             :src="src"
             cover
-            max-height="682"
-            min-height="100%"
           />
         </v-card-text>
       </v-card>
