@@ -27,14 +27,15 @@ const pageStore = defineStore('mailchimp', () => {
         formData.append('u', '22c4b7ad434feeb43c3a16631');
         formData.append('id', '0f470c9e43');
         formData.append('MERGE0', email.value);
-        const result = await fetch(
+        await fetch(
           'https://nealsiebert.us21.list-manage.com/subscribe/post',
           {
             method: 'POST',
             body: formData,
           }
         );
-        console.log(result);
+      } catch(ex) {
+        // for some reason cors hates us
       } finally {
         loadingBase.value = false;
         emailBase.value = '';

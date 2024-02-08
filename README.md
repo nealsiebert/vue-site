@@ -8,7 +8,7 @@ At this time there are no tests, this is a small static site that only I will ev
 ## Deploying
 This site is deployed by hand to a s3 bucket, which is used as the basis for a cloudfront distribution. I may explore automated deployments, probably using github actions in the future. I would like to be able to just push to this repo and have new blog posts go out.
 ## TODO
-1. Add email subscription
+1. Responsive in landscape
 1. Add Google analytics
 1. Deploy automatically
 1. Fix chunk size

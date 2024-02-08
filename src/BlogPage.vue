@@ -41,9 +41,6 @@
       });
     }
   });
-  // below is where we switch between showing the
-  // blog posts content or the blog preview based
-  // on if there is a blogPosts.selectedPost or not
 </script>
 
 <template>

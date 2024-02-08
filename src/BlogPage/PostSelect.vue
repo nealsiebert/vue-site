@@ -3,13 +3,13 @@
     mdiFilter,
   } from '@mdi/js'
   import _ from 'lodash';
-  import { useBlogPostsStore, useMailchimpStore } from '../store'
+  import { useBlogPostsStore } from '../store'
   import Pagination from './PostSelect/PostPagination.vue'
+  import SubscribeButton from './PostSelect/SubscribeButton.vue';
   import PostsPreview from '../PostsPreview.vue'
   import { computed } from 'vue';
   import colors from 'vuetify/util/colors'
   const blogPosts = useBlogPostsStore();
-  const mailchimpStore = useMailchimpStore();
   defineEmits(['filterToggle'])
   const filters = computed(()=> {
     return _.sum([
@@ -31,50 +31,25 @@
     <v-toolbar
       :color="colors.grey.lighten2"
     >
-      <v-toolbar-item>
-        <v-badge
-          :content="filters"
-          :dot="filters === 0"
-          inline
-          max="9"
-        >
-          <v-btn icon>
-            <v-icon
-              :icon="mdiFilter"
-              @click="$emit('filterToggle')"
-            />
-          </v-btn>
-        </v-badge>
-      </v-toolbar-item>
-      <v-spacer />
-      <v-toolbar-item>
-        <v-responsive
-          class="mx-auto"
-          width="256"
-        >
-          <v-text-field
-            v-model="mailchimpStore.email"
-            :loading="mailchimpStore.loading"
-            :error="!mailchimpStore.valid && mailchimpStore.email !== ''"
-            density="compact"
-            single-line
-            hide-details="auto"
-            label="Email address"
-            placeholder="johndoe@gmail.com"
-            type="email"
+      <v-badge
+        :content="filters"
+        :dot="filters === 0"
+        inline
+        max="9"
+      >
+        <v-btn icon>
+          <v-icon
+            :icon="mdiFilter"
+            @click="$emit('filterToggle')"
           />
-        </v-responsive>
-      </v-toolbar-item>
-      <v-toolbar-item>
-        <v-btn
-          text="Subscribe"
-          :disabled="!mailchimpStore.valid"
-          :loading="mailchimpStore.loading"
-          @click="() => mailchimpStore.subscribe()"
-        />
-      </v-toolbar-item>
+        </v-btn>
+      </v-badge>
       <v-spacer />
-      <v-toolbar-item>
+      <v-toolbar-items>
+        <SubscribeButton />
+      </v-toolbar-items>
+      <v-spacer />
+      <v-toolbar-items>
         <v-btn
           href="https://www.nealsiebert.com/feed.xml"
           icon
@@ -83,7 +58,7 @@
             icon="fa:fas fa-rss"
           />
         </v-btn>
-      </v-toolbar-item>
+      </v-toolbar-items>
     </v-toolbar>
     <v-card-text v-if="blogPosts.page.length > 0">
       <PostsPreview
