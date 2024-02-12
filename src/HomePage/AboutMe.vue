@@ -53,8 +53,8 @@ const src = computed(() => {
           About Me
         </v-card-title>
         <v-card-text class="text-center">
-          Hi, I'm Neal. I have been a software engineer for 18 years working in the video game, GIS, ad tech, and moving industries. I've shipped software for XBox,
-          Playstation, Wii, Windows, Linux, IOS, Android, and the web. For the past 10 years I have managed product development teams and organizations.
+          Hi, I'm Neal. I have been a software engineer for 18 years working in the video game, GIS, ad tech, and moving industries. I've shipped software for Xbox,
+          PlayStation, Wii, Windows, Linux, IOS, Android, and the web. For the past 10 years I have managed product development teams and organizations.
           <!-- eslint-disable-next-line -->
           If you would like to know more about my professional credentials please head over <router-link to="/career">here</router-link>, 
           visit me on <a href="https://www.linkedin.com/in/nealsiebert/">LinkedIn</a>, or contact me at <a href="mailto:info@nealsiebert.com">info@nealsiebert.com</a>
