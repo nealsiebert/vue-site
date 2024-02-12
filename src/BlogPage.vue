@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import colors from 'vuetify/util/colors'
   import { useBlogPostsStore, usePagesStore } from './store'
   import { ref, onBeforeMount } from 'vue';
   import { useRoute, useRouter } from 'vue-router';
@@ -34,7 +33,7 @@
         blogPosts.tagFilter = arrayHelper(route.query['tag']);
       }
       if (route.query['series']) {
-        blogPosts.seriesFilter = arrayHelper(route.query['series']);
+        blogPosts.seriesFilter = arrayHelper(route.query['series']).map(_.startCase);
       }
       router.replace({
         query: {},
@@ -48,28 +47,7 @@
     :drawer="drawer"
     @drawer-toggle="toggleDrawer"
   />
-  <v-sheet
-    :color="colors.grey.lighten4"
-    min-width="100%"
-    min-height="100%"
-  >
-    <v-container>
-      <v-row>
-        <v-spacer
-          class="hidden-md-and-down"
-        />
-        <v-col 
-          cols="12"
-          md="10"
-        >
-          <PostSelect 
-            @filter-toggle="toggleDrawer" 
-          />
-        </v-col>
-        <v-spacer
-          class="hidden-md-and-down"
-        />
-      </v-row>
-    </v-container>
-  </v-sheet>
+  <PostSelect 
+    @filter-toggle="toggleDrawer" 
+  />
 </template>

@@ -20,7 +20,7 @@
     />
   </v-responsive>
   <v-btn
-    text="Subscribe"
+    text="Sign up"
     :disabled="!mailchimpStore.valid"
     :loading="mailchimpStore.loading"
     @click="() => mailchimpStore.subscribe()"

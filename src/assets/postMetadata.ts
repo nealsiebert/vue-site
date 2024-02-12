@@ -3,8 +3,8 @@ import _ from 'lodash';
 // the stick post when you visit the blog page
 export const stickyTitle = 'initial commit';
 // series
-export const startupSeries = 'bootstrap startup';
-export const dogTrainingSeries = 'dog training app';
+export const startupSeries = 'startup life';
+export const dogTrainingSeries = 'help my dog';
 // tags
 export const leadership = 'leadership';
 export const engineering = 'engineering';

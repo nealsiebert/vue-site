@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import colors from 'vuetify/util/colors'
   import { Post, useBlogPostsStore } from './store'
   import { useRoute, useRouter } from 'vue-router';
   import PostDisplay from './PostPage/PostDisplay.vue';
@@ -32,29 +31,8 @@
 </script>
 
 <template>
-  <v-sheet
-    :color="colors.grey.lighten4"
-    min-width="100%"
-    min-height="100%"
-  >
-    <v-container>
-      <v-row>
-        <v-spacer
-          class="hidden-md-and-down"
-        />
-        <v-col 
-          cols="12"
-          md="10"
-        >
-          <PostDisplay
-            v-if="selectedPost"
-            :post="(selectedPost as Post)"
-          />
-        </v-col>
-        <v-spacer
-          class="hidden-md-and-down"
-        />
-      </v-row>
-    </v-container>
-  </v-sheet>
+  <PostDisplay
+    v-if="selectedPost"
+    :post="(selectedPost as Post)"
+  />
 </template>

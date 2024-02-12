@@ -2,13 +2,13 @@
   import summary from '../assets/executiveSummary.md?raw'
   import colors from 'vuetify/util/colors';
   import TLDREntry from './ExecSummary/TLDREntry.vue';
-  const tldrColor = colors.grey.lighten3;
+  const tldrColor = colors.grey.lighten2;
 </script>
 
 <template>
   <v-row>
     <v-col
-      md="4"
+      lg="4"
       cols="12"
     >
       <v-card
@@ -57,10 +57,12 @@
       </v-card>
     </v-col>
     <v-col
-      md="8"
+      lg="8"
       cols="12"
     >
-      <v-card>
+      <v-card
+        min-height="100%"
+      >
         <v-card-title>
           Summary
         </v-card-title>

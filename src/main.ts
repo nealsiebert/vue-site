@@ -32,6 +32,7 @@ const routes = [
   { path: '/', component: () => import('./HomePage.vue') },
   { path: '/career', component: () => import('./CareerPage.vue') },
   { path: '/blog', component: () => import('./BlogPage.vue') },
+  { path: '/signup', component: () => import('./SignUpPage.vue') },
   { path: '/blog/:title', component: () => import('./PostPage.vue') },
   // the 404 page this matches everything
   { path: '/:pathMatch(.*)*', component: () => import('./404Page.vue')}

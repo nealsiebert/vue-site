@@ -23,7 +23,7 @@ import { useRouter } from 'vue-router';
       <v-col 
         v-for="post in posts"
         :key="post.title"
-        :md="md"
+        :lg="md"
         :cols="cols"
       >
         <v-card

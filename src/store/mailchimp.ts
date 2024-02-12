@@ -19,6 +19,7 @@ const pageStore = defineStore('mailchimp', () => {
   });
   const valid = computed(() => validBase.value);
   const loading = computed(() => loadingBase.value);
+  const dialogModel = ref(false)
   async function subscribe() {
     if (validBase.value && !loadingBase.value) {
       loadingBase.value = true;
@@ -39,6 +40,7 @@ const pageStore = defineStore('mailchimp', () => {
       } finally {
         loadingBase.value = false;
         emailBase.value = '';
+        dialogModel.value = false;
       }
     }
   }
@@ -47,6 +49,7 @@ const pageStore = defineStore('mailchimp', () => {
     email,
     valid,
     loading,
+    dialogModel,
     subscribe,
   };
 });

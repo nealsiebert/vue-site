@@ -32,6 +32,11 @@ const markdownItContext =computed(() => {
     return `<${token.tag} ${classes}>`;
   }
 
+  md.renderer.rules.heading_open = function(tokens, i) {
+    let token = tokens[i];
+    return `<${token.tag} class = "pt-4 pb-4">`;
+  }
+
   for (const plugin of props.plugins ?? []) {
     md.use(plugin);
   }

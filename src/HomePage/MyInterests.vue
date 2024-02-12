@@ -17,7 +17,7 @@ import engineering from '../assets/engineering.md?raw';
         <v-container>
           <v-row>
             <v-col
-              md="4"
+              lg="4"
               cols="12"
             >
               <router-link to="/blog?tag=product">
@@ -30,7 +30,7 @@ import engineering from '../assets/engineering.md?raw';
               </router-link>
             </v-col>
             <v-col
-              md="4"
+              lg="4"
               cols="12"
             >
               <router-link to="/blog?tag=engineering">
@@ -45,7 +45,7 @@ import engineering from '../assets/engineering.md?raw';
               </router-link>
             </v-col>
             <v-col
-              md="4"
+              lg="4"
               cols="12"
             >
               <router-link to="/blog?tag=leadership">
