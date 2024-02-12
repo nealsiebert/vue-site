@@ -67,12 +67,12 @@
         :posts="blogPosts.page"
       />      
     </v-card-text>
-    <v-card-title
+    <v-card-text
       v-if="blogPosts.page.length === 0"
       style="text-align: center;"
     >
       I'm sorry, I this content isn't available yet. Please check back soon.     
-    </v-card-title>
+    </v-card-text>
     <v-toolbar
       color="white"
     >
