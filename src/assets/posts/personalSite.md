@@ -58,4 +58,6 @@ there are still a few things I want to do:
 
 I will update this post if / when those happen. 
 ### Update: 2/12/2024 RSS and Email Subscriptions
-I did it, you can subscribe to my newsletter. I am not sure how often it will be updated, but you can get updates when it is. I tried [MailerLite](https://www.mailerlite.com/) as my first attempt, but there was no easy way to get the forms working on the site. Next, I tried [Mailchimp](https://mailchimp.com/) and ran into similar issues. I ended up finding [this help page](https://mailchimp.com/help/host-your-own-signup-forms/), which led me to implementing my own forms.
+I did it, you can subscribe to my newsletter. I am not sure how often it will be updated, but you can get updates when it is. I tried [MailerLite](https://www.mailerlite.com/) as my first attempt, but there was no easy way to get the forms working on the site. Next, I tried [Mailchimp](https://mailchimp.com/) and ran into similar issues. I ended up finding [this help page](https://mailchimp.com/help/host-your-own-signup-forms/), which led me to implementing my own [forms](https://github.com/nealsiebert/vue-site/blob/5051c20e9289e983535e69eeebb514b2e06a2dda/src/SignUpModal.vue).\
+\
+The [RSS](https://en.wikipedia.org/wiki/RSS) feed was much more straightforward. I implemented a [build step](https://github.com/nealsiebert/vue-site/blob/5051c20e9289e983535e69eeebb514b2e06a2dda/src/rssFeed.ts) that uses the list of posts from the site to create the new feed.xml file.
