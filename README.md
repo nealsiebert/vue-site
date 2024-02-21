@@ -14,3 +14,10 @@ This site is deployed by hand to a s3 bucket, which is used as the basis for a c
 1. Fix chunk size
 1. Add a table of contents to each post
 1. Figure out a way to crawl the site and make sure every link is live
+## Images
+All rites to images used in this site are either owned by me or under creative commons use without attribution.
+product.jpg from https://pxhere.com/en/photo/1607454
+engineering-1.jpg https://www.lookandlearn.com
+engineering-2.jpg https://www.lookandlearn.com
+engineering-3.jpg https://www.lookandlearn.com
+leadership.jpg https://pxhere.com/en/photo/1432563
